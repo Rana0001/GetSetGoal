@@ -1,3 +1,4 @@
+from userpanel import *
 from database import *
 from tkinter import *
 from tkvideo import * # pip install tkvideo
@@ -5,6 +6,8 @@ from PIL import ImageTk, Image
 
 from tkinter import messagebox
 
+global user_name
+global password
 
 class Windows(Tk):
     def __init__(self):
@@ -55,12 +58,7 @@ class Windows(Tk):
 
 
     def RegWin(self):
-        # global txt_fname
-        # global txt_lname
-        # global txt_contactno
-        # global txt_email
-        # global txt_password
-        # global txt_gender
+
         # #
         # txt_fname = StringVar()
         # txt_lname = StringVar()
@@ -171,6 +169,8 @@ class Windows(Tk):
         self.log.iconbitmap("Graphics/Logo/logo.ico")
 
         def Login():
+            global user_name
+            global password
             myConn = Database()
             user_name = entry_one.get()
             password = entry_two.get()
@@ -182,8 +182,9 @@ class Windows(Tk):
                 res = myCur.fetchall()
                 for i in res:
                     if str(i[0]==user_name) and str(i[1]==password):
-                           messagebox.showinfo("Login Message","Login Successful.")
+                           messagebox.showinfo("Login Message","Login Successful.",parent=self.log)
                            self.log.withdraw()
+                           return user_panel()
                     else:
                         messagebox.showerror("Login Error", "Please! Enter Correct Username and Password.")
 
