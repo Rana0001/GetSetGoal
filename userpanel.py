@@ -1,6 +1,9 @@
 from tkinter import *
 from PIL import ImageTk, Image
+
 from tkvideo import *
+
+
 
 def user_panel():
     upanel = Tk()
@@ -15,20 +18,32 @@ def user_panel():
 
 
     frame = Frame(upanel,bd=3,highlightthickness= 5,highlightcolor="#1a2b63",highlightbackground="#1a2b63")
-    frame.place(x=5,y=0,height= 790,width = 350)
-    label = Label(text=f"Welcome",font= ("Cambria",15,"bold"),fg = "Black")
-    label.place(x= 150, y= 200)
+    frame.place(x=5,y=0,height= 835,width = 350)
+    label = Label(text=f"WELCOME",font= ("Futura",15,"bold"),fg = "#0066CA")
+    label.place(x= 120, y= 200)
 
-    # player_img = Image.open("userpanel_graphics/banner.png")
-    # player_resized = player_img.resize((1280, 400), Image.ANTIALIAS)
-    # player_img = ImageTk.PhotoImage(player_resized)
+
     my_label = Label(upanel)
-    my_label.place(x=400,y=5,height=300,width=1000)
-    player = tkvideo("Graphics/SplashScreen/SplashScreen.mp4", my_label, loop=1, size=(950, 280))
+    my_label.place(x=390,y=35,height=370,width=650)
+    player = tkvideo("Graphics/banner/intro.mp4", my_label, loop=1, size=(640, 360))
     player.play()
-    # upanel.after(5000, self.New_windows)
 
+    match_img = Image.open("userpanel_graphics/match.png")
+    match_resized = match_img.resize((330, 220), Image.ANTIALIAS)
+    match_image = ImageTk.PhotoImage(match_resized)
+    match_lbl = Label(upanel,image= match_image,bg= "#0066CA")
+    match_lbl.place(x=385,y=440,height=220,width=330)
+
+
+
+    bottom_img = Image.open("userpanel_graphics/bottom_banner.png")
+    bottom_resized = bottom_img.resize((940, 95), Image.ANTIALIAS)
+    bbanner_img = ImageTk.PhotoImage(bottom_resized)
+    bottom_lbl = Label(upanel,image= bbanner_img,bg= "#0066CA")
+    bottom_lbl.place(x=460,y=740,height=75,width=950)
 
     upanel.mainloop()
+
+
 
 user_panel()
