@@ -1,4 +1,4 @@
-from userpanel import *
+# from userpanel import *
 from database import *
 from tkinter import *
 from tkvideo import * # pip install tkvideo
@@ -223,14 +223,17 @@ class Windows(Tk):
         self.log.bg_login_resized = self.log.btn_login_img.resize((160, 143), Image.ANTIALIAS)
         self.log.login = ImageTk.PhotoImage(self.log.bg_login_resized)
         btn_login = Button(self.log, image=self.log.login, command = Login,activebackground="#0066CA", bg="#0066CA", bd=0)
-        btn_login.place(x=664, y=615, height=60, width=210)
+        btn_login.place(x=650, y=615, height=60, width=180)
         # Resisizing and implementing the image in the register button.
-        self.log.btn_register_img = Image.open("background/5.png")
-        self.log.bg_register_resized = self.log.btn_register_img.resize((150, 170), Image.ANTIALIAS)
-        self.log.register = ImageTk.PhotoImage(self.log.bg_register_resized)
 
-        btn_register = Button(self.log, image=self.log.register, command=self.RegWin, activebackground="#0066CA", bg="#0066CA",bd=0)
-        btn_register.place(x=950, y=595, height=100, width=200)
+        self.log.small_frame = Frame(self.log,bg="#0066CA")
+        self.log.small_frame.place(x=875,y=615,height= 60,width=70)
+        # self.log.btn_register_img = Image.open("background/5.png")
+        # self.log.bg_register_resized = self.log.btn_register_img.resize((150, 170), Image.ANTIALIAS)
+        # self.log.register = ImageTk.PhotoImage(self.log.bg_register_resized)
+        #
+        # btn_register = Button(self.log, image=self.log.register, command=self.RegWin, activebackground="#0066CA", bg="#0066CA",bd=0)
+        # btn_register.place(x=950, y=595, height=100, width=200)
 
 if __name__ == '__main__':
     root = Windows()
