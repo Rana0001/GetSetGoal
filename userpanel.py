@@ -4,7 +4,6 @@ from PIL import ImageTk, Image
 from tkvideo import *
 
 
-
 def user_panel():
     upanel = Tk()
     upanel.title("Welcome to GetSetGoal".center(470))
@@ -47,24 +46,53 @@ def user_panel():
 
 # Dashboard Button
     dash_img = Image.open("menu_icons/dashboard.png")
-    dash_resized = dash_img.resize((345, 68), Image.ANTIALIAS)
+    dash_resized = dash_img.resize((348, 68), Image.ANTIALIAS)
     dash_image = ImageTk.PhotoImage(dash_resized)
     btn_dash = Button(upanel,image = dash_image,bg="#E9EDF5",bd=0)
-    btn_dash.place(x= 12,y=250,width= 335,height=60)
+    btn_dash.place(x= 14,y=250,width= 335,height=60)
 
 # League Button
     league_img = Image.open("menu_icons/league.png")
-    league_resized = league_img.resize((340, 80), Image.ANTIALIAS)
+    league_resized = league_img.resize((340, 76), Image.ANTIALIAS)
     league_image = ImageTk.PhotoImage(league_resized)
     btn_league = Button(upanel, image=league_image, bg="#E9EDF5", bd=0)
     btn_league.place(x=37, y=310, width=310, height=60)
 
 # Player of the month button
     mvp_img = Image.open("menu_icons/player.png")
-    mvp_resized = mvp_img.resize((350, 75), Image.ANTIALIAS)
+    mvp_resized = mvp_img.resize((346, 70), Image.ANTIALIAS)
     mvp_image = ImageTk.PhotoImage(mvp_resized)
     btn_mvp = Button(upanel, image=mvp_image, bg="#E9EDF5", bd=0)
-    btn_mvp.place(x=37, y=370, width=305, height=60)
+    btn_mvp.place(x=35, y=370, width=305, height=60)
+
+# Top Goal Scorer button
+    top_img = Image.open("menu_icons/Top.png")
+    top_resized = top_img.resize((346, 70), Image.ANTIALIAS)
+    top_image = ImageTk.PhotoImage(top_resized)
+    top_btn = Button(upanel, image=top_image, bg="#E9EDF5", bd=0)
+    top_btn.place(x=25, y=430, width=305, height=60)
+
+# Update Profiles Button
+    update_img = Image.open("menu_icons/update.png")
+    update_resized = update_img.resize((345, 65), Image.ANTIALIAS)
+    update_image = ImageTk.PhotoImage(update_resized)
+    update_btn = Button(upanel, image=update_image, bg="#E9EDF5", bd=0)
+    update_btn.place(x=25, y=490, width=305, height=60)
+
+# Play Quiz Button
+    quiz_img = Image.open("menu_icons/quiz.png")
+    quiz_resized = quiz_img.resize((315, 65), Image.ANTIALIAS)
+    quiz_image = ImageTk.PhotoImage(quiz_resized)
+    quiz_btn = Button(upanel, image=quiz_image, bg="#E9EDF5", bd=0)
+    quiz_btn.place(x=25, y=550, width=290, height=60)
+
+# Log out button
+    log_img = Image.open("menu_icons/log.png")
+    log_resized = log_img.resize((300, 60), Image.ANTIALIAS)
+    log_image = ImageTk.PhotoImage(log_resized)
+    log_btn = Button(upanel, image=log_image, bg="#E9EDF5", bd=0)
+    log_btn.place(x=25, y=750, width=290, height=60)
+
 
     # bottom_lbl = Label(upanel,image= dash_image,bg= "#E9EDF5")
     # bottom_lbl.place(x=30,y=250,height=40,width=320)
