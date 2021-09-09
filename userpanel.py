@@ -27,11 +27,41 @@ def user_panel():
 
 
     def mvp():
-        man_img = Image.open("userpanel_graphics/mvp.png")
-        man_resized = man_img.resize((1080, 800), Image.ADAPTIVE)
-        mvp_banner_image = ImageTk.PhotoImage(man_resized)
-        mvp_lbl = Label(upanel, image=mvp_banner_image, bg="#0066CA")
-        mvp_lbl.place(x=370, y=10,height=800,width=1080)
+
+
+        bg_image = Image.open("background/UserBack.png")
+        upanel.bg_image_resized = bg_image.resize((1530, 880), Image.ANTIALIAS)
+        upanel.resized = ImageTk.PhotoImage(upanel.bg_image_resized)
+        bg_Img = Label(upanel, image=upanel.resized)
+        bg_Img.place(x=350, y=0, relheight=1, relwidth=1)
+
+        title_img = Image.open("mvp/title.png")
+        upanel.title_resized = title_img.resize((800, 70), Image.ADAPTIVE)
+        upanel.mvp_title_image = ImageTk.PhotoImage(upanel.title_resized)
+        mvp_title = Label(upanel, image=upanel.mvp_title_image, bg="#0066CA")
+        mvp_title.place(x=380, y=50, height=70, width=800)
+
+        man_img = Image.open("mvp/player.png")
+        upanel.man_resized = man_img.resize((350, 550), Image.ADAPTIVE)
+        upanel.mvp_banner_image = ImageTk.PhotoImage(upanel.man_resized)
+        mvp_lbl = Label(upanel, image=upanel.mvp_banner_image, bg="#0066CA")
+        mvp_lbl.place(x=700, y=290, height=550, width=350)
+
+        name_img = Image.open("mvp/name.png")
+        upanel.name_resized = name_img.resize((350, 190), Image.ADAPTIVE)
+        upanel.mvp_name_image = ImageTk.PhotoImage(upanel.name_resized)
+        mvp_name = Label(upanel, image=upanel.mvp_name_image, bg="#0066CA")
+        mvp_name.place(x=1150, y=280, height=200, width=350)
+
+        club_img = Image.open("mvp/club.png")
+        upanel.club_resized = club_img.resize((350, 190), Image.ADAPTIVE)
+        upanel.mvp_club_image = ImageTk.PhotoImage(upanel.club_resized)
+        mvp_club = Label(upanel, image=upanel.mvp_club_image, bg="#0066CA")
+        mvp_club.place(x=1150, y=480, height=200, width=350)
+
+        # info_icon = ImageTk.PhotoImage(Image.open("mvp/info.png"))
+        btn_info = Button(upanel,text="i",font=("Cambria",25,"italic"),bd=0,relief = RIDGE,bg="#E9EDF5",fg="#0066CA",activebackground="#E9EDF5",activeforeground="#0066CA")
+        btn_info.place(x=1300,y=230,height=40,width=40)
 
 
     frame = Frame(upanel, bd=3, highlightthickness=5, highlightcolor="#1a2b63", highlightbackground="#1a2b63",
@@ -127,6 +157,5 @@ def user_panel():
     log_lbl.place(x=24, y=750, height=50, width=50)
 
     upanel.mainloop()
-
 
 user_panel()
