@@ -1,4 +1,6 @@
 from tkinter import *
+import pyttsx3
+import wikipedia
 from PIL import ImageTk, Image
 from tkvideo import *
 from tkinter import messagebox
@@ -28,7 +30,13 @@ def user_panel():
 
     def mvp():
 
-
+        def describe():
+            engine = pyttsx3.init()
+            player = wikipedia.summary("Karim Benzema",2)
+            voices = engine.getProperty("voices")
+            engine.setProperty('voice',voices[1].id)
+            engine.say(player)
+            engine.runAndWait()
         bg_image = Image.open("background/UserBack.png")
         upanel.bg_image_resized = bg_image.resize((1530, 880), Image.ANTIALIAS)
         upanel.resized = ImageTk.PhotoImage(upanel.bg_image_resized)
@@ -60,7 +68,7 @@ def user_panel():
         mvp_club.place(x=1150, y=480, height=200, width=350)
 
         # info_icon = ImageTk.PhotoImage(Image.open("mvp/info.png"))
-        btn_info = Button(upanel,text="i",font=("Cambria",25,"italic"),bd=0,relief = RIDGE,bg="#E9EDF5",fg="#0066CA",activebackground="#E9EDF5",activeforeground="#0066CA")
+        btn_info = Button(upanel,text="i",font=("Cambria",25,"italic"),command=describe,bd=0,relief = RIDGE,bg="#E9EDF5",fg="#0066CA",activebackground="#E9EDF5",activeforeground="#0066CA")
         btn_info.place(x=1300,y=230,height=40,width=40)
 
 
