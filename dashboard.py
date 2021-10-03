@@ -18,7 +18,7 @@ def user_panel():
     bg_Img.place(x=0, y=0, relheight=1, relwidth=1)
 
     def dash():
-        return 0
+        return user_panel()
 
     def logout():
         result =  messagebox.askquestion("LOG OUT".center(90),"Are you sure you want to log out?")
