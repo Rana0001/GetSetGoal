@@ -92,7 +92,7 @@ class Windows(Tk):
                         myConn.mydb.commit()
 
                         self.reg.withdraw()
-                        return self.LogWin()
+                        return self.New_windows()
                     else:
                         messagebox.showerror("Warning!", "Please! Enter 10 digits only.", parent=self.reg)
                 else:
