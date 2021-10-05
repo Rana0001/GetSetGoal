@@ -1,7 +1,7 @@
 <h1><b><i>Final Project of Computing Activity Led Learning</i></b></h1>
 <br>
 <p align ="right"><b><i>Developed by TheWizards</b></i></p>
-<h1><b><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GetSetGoal</b></i></h1>
+<h1><b><i>&nbsp;&nbsp;&nbsp;;GetSetGoal</b></i></h1>
 <br>
 <p align = "center">
 <img src="https://user-images.githubusercontent.com/51354885/136058342-e08ba2c7-658f-43ac-9a55-0001910419ad.png" height = "400" width = "500"/></p>
@@ -45,23 +45,16 @@ After installation is complete, write :- from PIL import ImageTk,Image in your f
 <h1><i>Some of the Screenshots of GetSetGoal</i></h1><br>
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/51354885/136061839-ff56c95a-11ea-4876-a1e9-f5994d899227.png" width="500" height="400"></td>
-    <td><img src="https://user-images.githubusercontent.com/51354885/136061841-0505addd-664b-4fc1-b942-929b8219c0bb.png" width="500" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/51354885/136062246-6c544671-77d6-489c-8c93-ebc1ebf9c1bd.png" width="500" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/51354885/136062260-954e91c4-ea69-49aa-838c-83dc5477dcb6.png" width="500" height="400"></td>
   </tr></table>
  
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/51354885/136061848-112997d7-c2c5-489c-95f9-ec2cb86c18db.png" width="500" height="400"></td>
-    <td><img src="https://user-images.githubusercontent.com/51354885/136061848-112997d7-c2c5-489c-95f9-ec2cb86c18db.png" width="500" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/51354885/136062239-9c57a769-e3b1-4747-bf1a-f7e7d36ed24a.png" width="500" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/51354885/136062249-6d76539a-0dc1-430c-84d8-223316fd713d.png" width="500" height="400"></td>
   </tr></table>
- <p align="center"><img src ="https://user-images.githubusercontent.com/51354885/136061827-0730f4e6-0c3e-4248-a26a-b0603d90d1b1.png" height="400" width = "600"></p>
+ <p align="center"><img src ="https://user-images.githubusercontent.com/51354885/136062253-5112804b-045c-4759-bfd6-d461e1f7cb70.png" height="400" width = "600"></p>
 </div>
-
-
-
-
-
-
-
 
 
