@@ -34,27 +34,27 @@ You can directly download tools via the link below:<br>
 1.Step 1:- Create New Project in Pycharm IDE.<br>
 2.Step 2: Install and Import Module(pyttsx3,tkvideo,wikipedia,etc).<br>
 2.Step 2:- Import tkinter.<br>
-<p align ="center">import tkinter<br>
- or<br>
+import tkinter<br>
+or<br>
  from tkinter import *</p>
 3.Step 3: Go to Terminal and install PIL (to import images in tkinter windows).<br>
- <p align ="center">In terminal write :- pip install PIL<br>
- After installation is complete, write :- from PIL import ImageTk,Image in your file.</p>
+In terminal write :- pip install PIL<br>
+After installation is complete, write :- from PIL import ImageTk,Image in your file.</p>
 4.Step 4: Now, you can use tkinter GUI library.<br>
  
- <h1><i>Some of the Screenshots of GetSetGoal</i></h1><br>
+<h1><i>Some of the Screenshots of GetSetGoal</i></h1><br>
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/51354885/136060583-67496e36-110a-4437-8088-b29f4552d220.png" width="500" height="400"></td>
-    <td><img src="https://user-images.githubusercontent.com/51354885/136060669-2397b7a0-ee59-4570-a2a5-fe3e38bb159c.png" width="500" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/51354885/136061839-ff56c95a-11ea-4876-a1e9-f5994d899227.png" width="500" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/51354885/136061841-0505addd-664b-4fc1-b942-929b8219c0bb.png" width="500" height="400"></td>
   </tr></table>
  
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/51354885/136060830-c608ba4c-fe36-4573-abc5-4d9dec3e1c34.png" width="500" height="400"></td>
-    <td><img src="https://user-images.githubusercontent.com/51354885/136060779-2978669e-7b10-4f9f-8797-e3e867d9d539.png" width="500" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/51354885/136061848-112997d7-c2c5-489c-95f9-ec2cb86c18db.png" width="500" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/51354885/136061848-112997d7-c2c5-489c-95f9-ec2cb86c18db.png" width="500" height="400"></td>
   </tr></table>
- <p align="center"><img src ="https://user-images.githubusercontent.com/51354885/136060882-049b1d08-9889-4a3a-9206-f431be40ab9e.png" height="400" width = "600"></p>
+ <p align="center"><img src ="https://user-images.githubusercontent.com/51354885/136061827-0730f4e6-0c3e-4248-a26a-b0603d90d1b1.png" height="400" width = "600"></p>
 </div>
 
 
