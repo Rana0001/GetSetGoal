@@ -8,8 +8,8 @@ from PIL import ImageTk, Image
 from tkvideo import *
 from tkinter import messagebox
 
-
 user_name = ""
+
 
 def user_panel(username):
     global user_name
@@ -288,7 +288,8 @@ def user_panel(username):
     quiz_resized = quiz_img.resize((50, 50), Image.ANTIALIAS)
     quiz_image = ImageTk.PhotoImage(quiz_resized)
     quiz_btn = Button(upanel, text=" PLAY QUIZ                      ", activebackground="#E9EDF5",
-                      activeforeground="#0066CA", command = play,font=("Cambria", 16, "bold"), fg="#0066CA", bg="#E9EDF5", bd=0)
+                      activeforeground="#0066CA", command=play, font=("Cambria", 16, "bold"), fg="#0066CA",
+                      bg="#E9EDF5", bd=0)
     quiz_btn.place(x=78, y=550, width=250, height=50)
     quiz_lbl = Label(upanel, image=quiz_image, bg="#E9EDF5")
     quiz_lbl.place(x=24, y=550, height=50, width=50)
@@ -305,3 +306,4 @@ def user_panel(username):
     log_lbl.place(x=24, y=750, height=50, width=50)
 
     upanel.mainloop()
+

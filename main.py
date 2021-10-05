@@ -1,3 +1,5 @@
+import mysql.connector
+
 from userpanel import *
 from admin_panel import *
 from database import *
@@ -56,7 +58,8 @@ class Windows(Tk):
         self.win.btn_guest_img = Image.open("Graphics/Logo/Admin.png")
         self.win.bg_guest_resized = self.win.btn_guest_img.resize((495, 80), Image.ANTIALIAS)
         self.win.guest = ImageTk.PhotoImage(self.win.bg_guest_resized)
-        btn_guest = Button(self.win, image=self.win.guest, command = self.Log_admin, bg="#0066CA", bd=0, activebackground="#0066CA")
+        btn_guest = Button(self.win, image=self.win.guest, command=self.Log_admin, bg="#0066CA", bd=0,
+                           activebackground="#0066CA")
         btn_guest.place(x=640, y=450, height=85, width=495)
 
     def RegWin(self):
@@ -168,6 +171,10 @@ class Windows(Tk):
         self.log.geometry("1680x1080+-10+-5")
         self.log.iconbitmap("Graphics/Logo/logo.ico")
 
+        def back():
+            self.log.withdraw()
+            return self.New_windows()
+
         def Login():
             global user_name
             global password
@@ -221,17 +228,26 @@ class Windows(Tk):
         entry_two = Entry(self.log, border=0, font=("Times New Roman", 15))
         entry_two.place(x=662, y=525, width=290, height=40)
         entry_two.config(show="*", bg="#E9EDF5")
-        # Resisizing and implementing the image in the login button.
+        # Resizing and implementing the image in the login button.
         self.log.btn_login_img = Image.open("background/4.png")
         self.log.bg_login_resized = self.log.btn_login_img.resize((160, 143), Image.ANTIALIAS)
         self.log.login = ImageTk.PhotoImage(self.log.bg_login_resized)
         btn_login = Button(self.log, image=self.log.login, command=Login, activebackground="#0066CA", bg="#0066CA",
                            bd=0)
         btn_login.place(x=650, y=615, height=60, width=180)
+
         # Resisizing and implementing the image in the register button.
 
         self.log.small_frame = Frame(self.log, bg="#0066CA")
         self.log.small_frame.place(x=875, y=615, height=60, width=70)
+
+        # Resizing and implementing the image in the back button
+        self.log.btn_back_img = Image.open("background/btn_back.png")
+        self.log.bg_back_resized = self.log.btn_back_img.resize((160, 70), Image.ANTIALIAS)
+        self.log.back = ImageTk.PhotoImage(self.log.bg_back_resized)
+        btn_back = Button(self.log, image=self.log.back, command=back, activebackground="#0066CA", bg="#0066CA",
+                          bd=0)
+        btn_back.place(x=850, y=613, height=70, width=180)
 
     def Log_admin(self):
         self.win.withdraw()
@@ -270,6 +286,10 @@ class Windows(Tk):
                 myConn.mydb.commit()
                 myConn.mydb.close()
 
+        def back():
+            self.log.withdraw()
+            return self.New_windows()
+
         # Adding Background Image
 
         self.log.bg_image = Image.open("background/3.png")
@@ -307,6 +327,14 @@ class Windows(Tk):
 
         self.log.small_frame = Frame(self.log, bg="#0066CA")
         self.log.small_frame.place(x=875, y=615, height=60, width=70)
+
+        # Resizing and implementing the image in the back button
+        self.log.btn_back_img = Image.open("background/btn_back.png")
+        self.log.bg_back_resized = self.log.btn_back_img.resize((160, 70), Image.ANTIALIAS)
+        self.log.back = ImageTk.PhotoImage(self.log.bg_back_resized)
+        btn_back = Button(self.log, image=self.log.back, command=back, activebackground="#0066CA", bg="#0066CA",
+                          bd=0)
+        btn_back.place(x=850, y=613, height=70, width=180)
 
 
 if __name__ == '__main__':

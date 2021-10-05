@@ -7,10 +7,11 @@ answer = ['A', 'D', 'A', 'B', 'C']
 question = ["Question.1) Who have won most Ballon d'Or title?", "Question.2) Who is known as hand of god?",
             "Question.3) Which Country have won most world cup title?",
             "Question.4) Which Club have won most Champions League title?",
-            "Question.5) Which Country have won Copa America 2020?"]
+            "Question.5) Which Country have won COPA America 2020?"]
 
-
+score = 0
 def play():
+    global score
     chance = 3
     quiz_pannel = Toplevel()
     quiz_pannel.title("Play Quiz".center(450))
@@ -21,6 +22,8 @@ def play():
     quiz_pannel.resized = ImageTk.PhotoImage(quiz_pannel.bg_image_resized)
     bg_Img = Label(quiz_pannel, image=quiz_pannel.resized)
     bg_Img.place(x=0, y=0, relheight=1, relwidth=1)
+
+
 
     value = StringVar()
 
@@ -50,23 +53,28 @@ def play():
         option4.place(x=900, y=300, height=50, width=200)
 
         def answer5():
+            global score
             global answer
             chance = 3
             answer_option = value.get()
             print(answer_option)
             while chance > 0:
                 if answer_option == answer[4]:
+                    score += 10
                     choice = messagebox.showinfo("Correct Answer", "Argentina defeated Brazil, won COPA America 2020.",
                                                  parent=quiz_pannel)
+                    messagebox.showinfo("Score Board", f"Congratulation! You have Scored {score} points out of 50", parent=quiz_pannel)
                     quiz_pannel.withdraw()
                     break
                 else:
                     chance -= 1
             else:
-                messagebox.showinfo("Incorrect Answer", f"Wrong Answer! Try Again", parent=quiz_pannel)
+                messagebox.showinfo("Incorrect Answer", f"Wrong Answer! Try Again Next Time", parent=quiz_pannel)
+                messagebox.showinfo("Score Board", f"You have Scored {score}", parent=quiz_pannel)
+                quiz_pannel.withdraw()
 
-        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="Green", command=answer5)
-        submit_button.place(x=680, y=500, height=60, width=150)
+        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="#E9EDF5", fg = "Black",font=("Cambria",15),command=answer5)
+        submit_button.place(x=720, y=480, height=60, width=150)
 
     def question4():
         global chance
@@ -94,22 +102,27 @@ def play():
         option4.place(x=900, y=300, height=50, width=200)
 
         def answer4():
+            global score
             global answer
             chance = 3
             answer_option = value.get()
             print(answer_option)
             while chance > 0:
                 if answer_option == answer[3]:
+                    score += 10
                     choice = messagebox.showinfo("Correct Answer", "Real Madrid have won 13 Champions league titles.",
                                                  parent=quiz_pannel)
+                    messagebox.showinfo("Score Board", f"Your Point is {score}", parent=quiz_pannel)
                     return question5()
                 else:
                     chance -= 1
             else:
                 messagebox.showinfo("Incorrect Answer", f"Wrong Answer! Try Again", parent=quiz_pannel)
+                messagebox.showinfo("Score Board", f"You have Scored {score} points out of 50", parent=quiz_pannel)
+                quiz_pannel.withdraw()
 
-        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="Green", command=answer4)
-        submit_button.place(x=680, y=500, height=60, width=150)
+        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="#E9EDF5", fg = "Black",font=("Cambria",15),command=answer4)
+        submit_button.place(x=720, y=480, height=60, width=150)
 
     def question3():
         global chance
@@ -137,22 +150,27 @@ def play():
         option4.place(x=900, y=300, height=50, width=200)
 
         def answer3():
+            global score
             global answer
             chance = 3
             answer_option = value.get()
             print(answer_option)
             while chance > 0:
                 if answer_option == answer[2]:
+                    score += 10
                     choice = messagebox.showinfo("Correct Answer", "Brazil have won 5 FIFA World Cup titles",
                                                  parent=quiz_pannel)
+                    messagebox.showinfo("Score Board", f"Your Point is {score}", parent=quiz_pannel)
                     return question4()
                 else:
                     chance -= 1
             else:
                 messagebox.showinfo("Incorrect Answer", f"Wrong Answer! Try Again", parent=quiz_pannel)
+                messagebox.showinfo("Score Board", f"You have Scored {score} points out of 50", parent=quiz_pannel)
+                quiz_pannel.withdraw()
 
-        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="Green", command=answer3)
-        submit_button.place(x=680, y=500, height=60, width=150)
+        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="#E9EDF5", fg = "Black",font=("Cambria",15),command=answer3)
+        submit_button.place(x=720, y=480, height=60, width=150)
 
     def question2():
         global chance
@@ -180,22 +198,27 @@ def play():
         option4.place(x=900, y=300, height=50, width=200)
 
         def answer2():
+            global score
             global answer
             chance = 3
             answer_option = value.get()
             print(answer_option)
             while chance > 0:
                 if answer_option == answer[1]:
+                    score += 10
                     choice = messagebox.showinfo("Correct Answer", "Diego Maradona is Known as Hand of God",
                                                  parent=quiz_pannel)
+                    messagebox.showinfo("Score Board", f"Your Point is {score}", parent=quiz_pannel)
                     return question3()
                 else:
                     chance -= 1
             else:
                 messagebox.showinfo("Incorrect Answer", f"Wrong Answer! Try Again", parent=quiz_pannel)
+                messagebox.showinfo("Score Board", f"You have Scored {score} points out of 50", parent=quiz_pannel)
+                quiz_pannel.withdraw()
 
-        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="Green", command=answer2)
-        submit_button.place(x=680, y=500, height=60, width=150)
+        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="#E9EDF5", fg = "Black",font=("Cambria",15),command=answer2)
+        submit_button.place(x=720, y=480, height=60, width=150)
 
     def question1():
         global chance
@@ -223,25 +246,34 @@ def play():
         option4.place(x=900, y=300, height=50, width=200)
 
         def answer1():
+            global score
             global answer
             chance = 3
-            no_of_chance = 3
             answer_option = value.get()
             print(answer_option)
             while chance > 0:
                 if answer_option == answer[0]:
-                    messagebox.showinfo("Correct Answer", "Lional Messi have won 6 Ballon d'Or", parent=quiz_pannel)
+                    score += 10
+                    messagebox.showinfo("Correct Answer", "Lionel Messi have won 6 Ballon d'Or", parent=quiz_pannel)
+                    messagebox.showinfo("Score Board", f"Your Point is {score}", parent=quiz_pannel)
                     return question2()
                 else:
                     chance -= 1
             else:
-                no_of_chance -= 1
                 messagebox.showinfo("Incorrect Answer", f"Wrong Answer! Try Again", parent=quiz_pannel)
+                messagebox.showinfo("Score Board", f"You have Scored {score} points out of 50", parent=quiz_pannel)
+                quiz_pannel.withdraw()
 
-        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="Green", command=answer1)
-        submit_button.place(x=680, y=500, height=60, width=150)
+        submit_button = Button(quiz_pannel, text="Submit", bd=2, bg="#E9EDF5", fg = "Black",font=("Cambria",15),command=answer1)
+        submit_button.place(x=720, y=480, height=60, width=150)
+    def start():
+        result = messagebox.askquestion("Play Quiz".center(90), "Do you want start quiz?", parent=quiz_pannel)
+        if result == 'yes':
+            return question1()
+        else:
+            return 0
 
-    start_button = Button(quiz_pannel, text="Start", bd=2, bg="Green", command=question1)
+    start_button = Button(quiz_pannel, text="Start", bd=2, bg="#E9EDF5", fg="Black", font=("Cambria",15),command=start)
     start_button.place(x=680, y=350, height=80, width=150)
 
     quiz_pannel.mainloop()
