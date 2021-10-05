@@ -1,7 +1,7 @@
 <h1><b><i>Final Project of Computing Activity Led Learning</i></b></h1>
 <br>
 <p align ="right"><b><i>Developed by TheWizards</b></i></p>
-<h1><b><i>&nbsp;&nbsp;&nbsp;;GetSetGoal</b></i></h1>
+<h1><b><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GetSetGoal</b></i></h1>
 <br>
 <p align = "center">
 <img src="https://user-images.githubusercontent.com/51354885/136058342-e08ba2c7-658f-43ac-9a55-0001910419ad.png" height = "400" width = "500"/></p>
