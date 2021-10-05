@@ -54,7 +54,7 @@ def admin_panel(username):
             myCursor = myConn.mydb.cursor()
             query = f"Delete from tbl_user where user_id ='{text_input_box1.get()}'"
             myCursor.execute(query)
-            messagebox.showinfo("Delete Alert!", "Profiles Successfully.")
+            messagebox.showinfo("Delete Alert!", "Profiles Deleted Successfully.")
             myConn.mydb.commit()
             myConn.mydb.close()
             return show_data()
